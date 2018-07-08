@@ -6,7 +6,19 @@ namespace CSharpPlayground
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string[] strings = new string[] {"Hello", "World"};
+            GoToStatement(strings);
+        }
+
+        static void GoToStatement(string[] args)
+        {
+            int i = 0;
+            goto titty;
+            farty:
+            Console.WriteLine(args[i++]);
+            titty:
+            if (i < args.Length)
+                goto farty;
         }
     }
 }
