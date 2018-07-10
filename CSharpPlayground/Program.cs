@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CSharpPlayground
 {
@@ -6,19 +7,9 @@ namespace CSharpPlayground
     {
         static void Main(string[] args)
         {
-            string[] strings = new string[] {"Hello", "World"};
-            GoToStatement(strings);
-        }
-
-        static void GoToStatement(string[] args)
-        {
-            int i = 0;
-            goto titty;
-            farty:
-            Console.WriteLine(args[i++]);
-            titty:
-            if (i < args.Length)
-                goto farty;
+            Test<int, bool> test = new Test<int, bool> {test1 = 1, test2 = true};
+            Console.WriteLine(test.test2);
+            Console.WriteLine(test.test1);
         }
     }
 }
